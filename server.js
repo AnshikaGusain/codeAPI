@@ -6,7 +6,6 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const dotenv=require("dotenv");
 dotenv.config();
-const Joi = require('joi');
 const { spawn } = require('child_process');
 const { body, validationResult } = require('express-validator');
 const socketIO  = require('socket.io');
