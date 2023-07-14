@@ -192,6 +192,10 @@ app.get('/api/code/:id',authenticateToken, (req, res) => {
   getSubmission(req,res,CodeSubmission);
 });
 
+app.get("/",(req,res)=>{
+  res.send("<h1>Hello there</h1>");
+})
+
 
 // Start the server
 server.listen(process.env.PORT, () => {
