@@ -53,7 +53,7 @@ To set up the judge0 API Clone project, follow these steps:
 4. Install the project dependencies by running `npm install` in the project directory.
 5. Set up a MongoDB database and configure the connection string in the project's `.env` file.
 6. Configure other environment variables as needed, such as the JWT secret, server port, etc., in the `.env` file.
-7. Start the server by running `npm start` or `node server.js`.
+7. Start the server by running `node server.js`.
 
 ****API Endpoints****
 
