@@ -38,7 +38,7 @@ The judge0 API Clone is built using the following technologies:
 - Node.js: The server-side runtime environment for executing JavaScript code.
 - Express.js: A web framework for building RESTful APIs in Node.js.
 - MongoDB: A NoSQL database for storing code submissions and execution results.
-- Docker: Used to create a sandboxed environment for executing code submissions.
+- Docker: Used to create a sandboxed environment for executing code submissions. ( **937544224472.dkr.ecr.ap-south-1.amazonaws.com/sandbox-image:latest -> This is docker image, which was developed as part of the project, has now been deployed on AWS ECR (Elastic Container Registry). It serves as a sandbox environment for running code securely.**)
 - JWT (JSON Web Tokens): Used for user authentication and authorization.
 - Socket.IO: A library for real-time, bidirectional communication between the server and the client.
 - Other libraries and packages: bcrypt for password hashing, dotenv for managing environment variables, and more.
