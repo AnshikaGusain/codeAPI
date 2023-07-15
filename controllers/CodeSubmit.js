@@ -8,7 +8,12 @@ const codeSubmit = async (req, res,CodeSubmission, spawn, io, socketId,userId) =
     io.to(socketId).emit('notification', { socketId: socketId, message: "Code execution starts" });
 
     // Execute the code in a child process
-    const childProcess = spawn('docker', ['run', '--rm', '937544224472.dkr.ecr.ap-south-1.amazonaws.com/sandbox-image:latest', Usercode, language, input]);
+    const childProcess = spawn('docker', ['run',
+    '--rm',
+    '-i',
+    '-v',
+    '/var/run/docker.sock:/var/run/docker.sock',
+    '937544224472.dkr.ecr.ap-south-1.amazonaws.com/sandbox-image:latest', Usercode, language, input]);
 
     let output = '';
     let error = '';
@@ -62,3 +67,5 @@ const codeSubmit = async (req, res,CodeSubmission, spawn, io, socketId,userId) =
 };
 
 module.exports = codeSubmit;
+
+
