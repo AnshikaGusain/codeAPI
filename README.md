@@ -59,9 +59,9 @@ To set up the judge0 API Clone project, follow these steps:
 
 The judge0 API Clone provides the following API endpoints:
 
-- `POST /api/register`: User registration endpoint for creating a new user account.
-- `POST /api/login`: User login endpoint for obtaining a JWT token for authentication.
-- `POST /api/code`: Endpoint for submitting code snippets and executing them in a sandboxed environment. (Make sure to add JWT token in Authorisation request header before sending request)
+- `POST /api/register`: User registration endpoint for creating a new user account. (Send username and password as body of request)
+- `POST /api/login`: User login endpoint for obtaining a JWT token for authentication. (Send username and password as body of request)
+- `POST /api/code`: Endpoint for submitting code snippets and executing them in a sandboxed environment. Make sure to add JWT token in Authorisation request header before sending request. Send code, language (java,python,cpp,c,javascript) and input (if required in code) as body of request
 - `GET /api/code/:id`: Endpoint for retrieving the details of a code submission by its ID.
 
 ****Conclusion****
